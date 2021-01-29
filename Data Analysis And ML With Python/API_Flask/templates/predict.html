@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='predict.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="left">
+</div>
+<div class="right">
+  {% if name ==""  %}
+  <h2>According to Dr.ESILV you are :</h2>
+  {% else %}
+  <h2>{{name}}, according to Dr.ESILV you are : </h2>
+  {% endif %}
+  <br>
+  <br>
+  <h1>{{var}}</h1>
+  <br>
+  <br>
+  <h4>{{var2}}</h4>
+</div>
+
+{% endblock %}
+
+{% block content1 %}
+<div class="credit">
+  <p>Photo by Tima Miroshnichenko from Pexels</p>
+</div>
+{% endblock %}

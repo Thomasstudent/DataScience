@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+p{
+  color: grey;
+  font-size: 10px;
+}
+
+h4{
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2{
+  color: white;
+  margin-left: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+}
+
+h1{
+    color:#1ABC9C;
+    margin-left: 50px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+}
+
+.credit{
+  width: 200px;
+  height: 20px;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right{
+  background-color: black;
+  width: 50%;
+  height: 300px;
+  float: right;
+  margin-top: 70px;
+}
+
+.left{
+  width: 50%;
+  height: 400px;
+  background-image: url("/static/photo2.jpg");
+  background-size: auto 100%;
+  float: left;
+}

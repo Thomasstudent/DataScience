@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='aboutus.css') }}">
+{% endblock %}
+
+{% block title %}Welcome{% endblock %}
+
+
+{% block content %}
+<div class="head">
+  <h1>About us ...</h1>
+  <h5>Did you know ? Dr Esilv is not really a doctor ... In fact, he's more of a Machine Learning doctor!
+To be serious, Dr. Esilv's team is made up of two engineering students specializing in the field of Big Data and artificial intelligence.
+Indeed, Thomas Isla and Kevin Jerusalmi created this project as part of their studies, and are proud to be able to help you.
+  </h5>
+</div>
+{% endblock %}

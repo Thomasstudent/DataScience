@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='base.css') }}">
+    {% block css %}
+    {% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <h3>Dr.ESILV</h3>
+      </a>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/Diagnostic">Diagnostic</a>
+          <a class="nav-item nav-link" href="/Result">Result</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="/AboutUs">About us</a>
+        </div>
+    </nav>
+    {% endblock %}
+
+    <div class="main">
+      {% block content %}
+      {% endblock %}
+    </div>
+    {% block content1 %}
+    {% endblock %}
+
+  </body>
+</html>

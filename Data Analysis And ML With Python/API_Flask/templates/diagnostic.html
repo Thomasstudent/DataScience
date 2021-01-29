@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block css %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='diagnostic.css') }}">
+{% endblock %}
+
+{% block title %}Welcome{% endblock %}
+
+
+{% block content %}
+<div class="left">
+</div>
+{% endblock %}
+
+{% block content1 %}
+<div class="low">
+  <form method="POST" action="/Diagnostic">
+  {{ form.csrf_token }}
+  <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+
+            <h5>{{(form.name.label)}}</h5>
+            {{form.name(class="form-control")}}
+            {% if form.name.errors %}
+            <ul class=errors>
+            {% for error in form.name.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.sex.label)}}</h5>
+            {{wtf.form_field(form.sex)}}
+            {% if form.sex.errors %}
+            <ul class=errors>
+            {% for error in form.sex.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.age.label)}}</h5>
+            {{form.age(class="form-control")}}
+            {% if form.age.errors %}
+            <ul class=errors>
+            {% for error in form.age.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.height.label)}}</h5>
+            {{form.height(class="form-control")}}
+            {% if form.height.errors %}
+            <ul class=errors>
+            {% for error in form.height.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+
+            <h5>{{(form.weight.label)}}</h5>
+            {{form.weight(class="form-control")}}
+            {% if form.weight.errors %}
+            <ul class=errors>
+            {% for error in form.weight.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.family.label)}}</h5>
+            {{wtf.form_field(form.family)}}
+            {% if form.family.errors %}
+            <ul class=errors>
+            {% for error in form.family.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.caloric_food.label)}}</h5>
+            {{wtf.form_field(form.caloric_food)}}
+            {% if form.caloric_food.errors %}
+            <ul class=errors>
+            {% for error in form.caloric_food.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.alcohol.label)}}</h5>
+            {{wtf.form_field(form.alcohol)}}
+            {% if form.alcohol.errors %}
+            <ul class=errors>
+            {% for error in form.alcohol.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.vegetables.label)}}</h5>
+            {{wtf.form_field(form.vegetables)}}
+            {% if form.vegetables.errors %}
+            <ul class=errors>
+            {% for error in form.vegetables.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+
+            <h5>{{(form.meals.label)}}</h5>
+            {{wtf.form_field(form.meals)}}
+            {% if form.meals.errors %}
+            <ul class=errors>
+            {% for error in form.meals.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.snack.label)}}</h5>
+            {{wtf.form_field(form.snack)}}
+            {% if form.snack.errors %}
+            <ul class=errors>
+            {% for error in form.snack.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.water.label)}}</h5>
+            {{wtf.form_field(form.water)}}
+            {% if form.water.errors %}
+            <ul class=errors>
+            {% for error in form.water.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.sport.label)}}</h5>
+            {{wtf.form_field(form.sport)}}
+            {% if form.sport.errors %}
+            <ul class=errors>
+            {% for error in form.sport.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <h5>{{(form.transport.label)}}</h5>
+            {{wtf.form_field(form.transport)}}
+            {% if form.transport.errors %}
+            <ul class=errors>
+            {% for error in form.transport.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+            <button type="submit" class="btn btn-success">Confirm</button>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </form>
+  </div>
+  <<div class="credit">
+    <p>Photo by Tima Miroshnichenko from Pexels</p>
+  </div>
+{% endblock %}

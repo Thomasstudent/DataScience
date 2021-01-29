@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='mainPage.css') }}">
+{% endblock %}
+
+{% block title %}Welcome{% endblock %}
+
+
+{% block content %}
+<div class="head">
+  <h1>Welcome</h1>
+  <h2> to Doctor ESILV</h2>
+</div>
+<div class="left">
+  <a href="/Diagnostic">
+    <button class="btn-hover color-1">Go to diagnostic</button>
+  </a>
+</div>
+{% endblock %}
